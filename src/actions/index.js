@@ -2,7 +2,7 @@ let nextTodoId = 0
 // ====================
 // Action Creators
 // ====================
-export function addTodo(text) {
+export const addTodo = text => {
   return {
     type: 'ADD_TODO',
     id: nextTodoId++,
@@ -10,14 +10,14 @@ export function addTodo(text) {
   }
 }
 
-export function completeTodo(id) {
+export const completeTodo = id => {
   return {
     type: 'COMPLETE_TODO',
     id
   }
 }
 
-export function setVisibilityFilter(filter) {
+export const setVisibilityFilter = filter => {
   return {
     type: 'SET_VISIBILITY_FILTER',
     filter

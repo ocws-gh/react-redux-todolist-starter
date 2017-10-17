@@ -6,17 +6,16 @@ class TodoItem extends React.Component {
     super(props);
   }
 
-  comp(e) {
+  handleDone(e) {
     e.preventDefault();
-    console.log(this.props);
-    this.props.completeTodo(this.props.id);
+    this.props.compm(this.props.id);
+    return;
   }
   
   render() {
     return (
       <li>
-        {this.props.id}: {this.props.text}
-        <a href="" onClick={this.comp.bind(this)}>完了</a>
+        {this.props.id}: {this.props.text} <a href="#" onClick={this.handleDone.bind(this)}>Done</a>
       </li>
     );
   }

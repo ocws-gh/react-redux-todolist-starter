@@ -33,7 +33,7 @@ const MOUNT_NODE = document.getElementById('root')
 ReactDOM.render(
   <Provider store={store}>
     <Router history={newHistory}>
-      <Route path="/" component={Apps} todos={initialState} />
+      <Route path="/" component={Apps} />
     </Router>
   </Provider>,
   MOUNT_NODE
