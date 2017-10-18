@@ -13,9 +13,11 @@ class TodoItem extends React.Component {
   }
   
   render() {
+    const flagDone = (this.props.completed) ? 'done' : null;
+    const textDone = (this.props.completed) ? 'undone' : 'done';
     return (
-      <li>
-        {this.props.id}: {this.props.text} <a href="#" onClick={this.handleDone.bind(this)}>Done</a>
+      <li className={flagDone}>
+        <span>{this.props.id}: {this.props.text}</span> <a href="#" onClick={this.handleDone.bind(this)}>{textDone}</a>
       </li>
     );
   }
