@@ -8,7 +8,6 @@ const getItemName = "todolist"
 export function loadList() {
   return (dispatch, getState) => {
     const todoListStorage = JSON.parse(localStorage.getItem(getItemName))
-    console.log('todoListStorag: '+todoListStorage)
 
     if(todoListStorage == null) {
       let rew = {
