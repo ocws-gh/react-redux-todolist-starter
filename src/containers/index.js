@@ -13,6 +13,20 @@ class App extends React.Component {
     };
   }
 
+  componentWillMount() {
+    this.props.loadList();
+  }
+
+  componentDidMount() {
+  }
+
+  componentDidUpdate() {
+    this.props.exportList();
+  }
+
+  componentWillUnmount() {
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const text = e.target.elements[0].value;
