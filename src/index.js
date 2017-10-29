@@ -34,18 +34,7 @@ const newHistory = createBrowserHistory();
 
 const initialState = 
 {
-  todos:[
-    // {
-    //   id: 0,
-    //   text:"dfa",
-    //   completed: false
-    // },
-    // {
-    //   id: 1,
-    //   text:"daafa",
-    //   completed: false
-    // }
-  ],
+  todos:[],
   visibilityFilter: 'SHOW_ALL'
 }
 

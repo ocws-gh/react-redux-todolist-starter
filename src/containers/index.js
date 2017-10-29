@@ -12,38 +12,20 @@ class App extends React.Component {
       text: this.props.text
     };
   }
-  componentWillMount() {
-    console.log('1:componentWillMount');
-    this.props.loadList();
-    // this.props.loadTasks();
-    // Object.keys(localStorage).forEach(function(key) { console.log(key); });
-  }
-  componentDidMount() {
-    console.log('2:componentDidMount');
-    // let rew = {
-    //     data1: "hoge1",
-    //     data2: "hoge2",
-    //     data3: "hoge3"
-    // }
-  }
-  componentDidUpdate() {
-    console.log('3:componentDidUpdate');
-    this.props.importList();
-    
-    // localStorage.setItem("aaa", this.props)
-    // localStorage.setItem('test', rew)
-    // console.log('rr:'+ewa)
-  }
-  componentWillUnmount() {
-    console.log('4:componentWillUnmount');
-  }
-  // componentDidMount() {
-  //   fetchHackerNews().then(json => {
-  //   this.setState({
-  //     news: json
-  //   })
-  // });
 
+  componentWillMount() {
+    this.props.loadList();
+  }
+
+  componentDidMount() {
+  }
+
+  componentDidUpdate() {
+    this.props.exportList();
+  }
+
+  componentWillUnmount() {
+  }
 
   handleSubmit(e) {
     e.preventDefault();

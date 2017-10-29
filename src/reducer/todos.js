@@ -16,7 +16,6 @@ const todos = ( state = [], action) => {
     case 'COMPLETE_TODO':
       return state.map(todo =>
         (todo.id === action.id)
-          // ? Object.assign({}, todo, {completed: !todo.completed})
           ? {...todo, completed: !todo.completed}
           : todo
       )
